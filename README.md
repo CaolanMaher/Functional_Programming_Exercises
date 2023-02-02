@@ -68,3 +68,34 @@ otherwise.
 Look at the function
 
 `pushOut :: Int -> Int`
+
+that takes a number and returns the number that is one step further from 0. That is,
+- pushOut 3 is 4
+- pushOut (-10) is (-11)
+- pushOut 0 is 0
+
+## Solution
+
+    pushOut :: Int -> Int
+    pushOut x
+        | x == 0 = 0
+        | x > 0 = x + 1
+        | x < 0 = x - 1
+        
+## Exercise 7
+Define a function
+
+`halve :: [a] -> ([a], [a])`
+
+that splits an even-lengthed list into two halves. For example:
+- halve [1,2,3,4,5,6] is ([1,2,3], [4,5,6])
+
+## Solution
+
+    halve :: [a] -> ([a], [a])
+    halve list = splitAt((length list + 1) `div` 2) list
+    
+## Exercise 8
+Define a function third
+
+`third :: [a] -> a`
